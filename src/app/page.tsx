@@ -1,101 +1,78 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="parentContainer flex justify-center w-[100%] flex-wrap ">
+      <div className="blogcontainer scale-in-bottom min-h-[380px] lg:min-w-[400px] lg:min-h-[340px] md:min-h-[410px] md:max-w-[320px] sm:max-w-[280px] sm:min-h-[430px] m-4 rounded-xl p-3">
+          
+            <img src="blog1.jpg" alt="" className=" w-[400px] h-[170px] bg-red-100" />
+            <h1 className="text-xl font-bold mb-4">"How to Stay Productive in College"</h1>
+            <p className="overflow-hidden"><strong>Description</strong>: Tips and strategies for enhancing productivity in college, including effective study schedules, goal-setting, and minimizing distractions to achieve academic success.
+            </p>
+        <Link href="/blog-1">
+           <button className="read absolute bottom-1.5 left-1/2 transform -translate-x-1/2 w-[90px] h-[25px] font-medium bg-yellow-400 rounded-full hover:font-medium hover:bg-black hover:text-yellow-400 hover:transition duration-500">
+            <span>Read More</span>
+           </button>
+        </Link>
+      </div>
+      <div className="blogcontainer scale-in-bottom min-h-[380px] lg:min-w-[400px] lg:min-h-[380px] md:min-h-[410px] md:max-w-[320px] sm:max-w-[280px] sm:min-h-[430px] m-4 mx-<6> rounded-xl p-3">
+          <img src="blog2.jpg" alt="" className=" w-[400px] h-[170px] bg-red-100"/>
+          <h1 className="text-xl font-bold mb-4">"Top 5 Anime You Must Watch"</h1>
+          <p><strong>Description</strong>: A curated list of five essential anime series, featuring popular titles like One Piece and Naruto, along with underrated gems, exploring key characters that captivate viewers.
+          </p>
+        <Link href="/blog-2">
+          <button className="read absolute bottom-1.5 left-1/2 transform -translate-x-1/2 w-[90px] h-[25px] font-medium bg-yellow-400 rounded-full hover:font-medium hover:bg-black hover:text-yellow-400 hover:transition duration-500">
+            <span>Read More</span>
+           </button>
+        </Link>
+      </div>
+      <div className="blogcontainer scale-in-bottom min-h-[380px] lg:min-w-[400px] lg:min-h-[380px] md:min-h-[410px] md:max-w-[320px] sm:max-w-[280px] sm:min-h-[430px] m-4 rounded-xl p-3">
+        {" "}
+          <img src="blog3.jpg" alt="" className=" w-[400px] h-[170px] bg-red-100"/>
+          <h1 className="text-xl font-bold mb-4">"Healthy Eating on a College Budget"</h1>
+          <p><strong>Description</strong>: Practical tips for maintaining a nutritious diet as a college student, focusing on meal planning, quick recipes, and making healthier food choices on a budget.
+          </p>
+        <Link href="/blog-3">
+          <button className="read absolute bottom-1.5 left-1/2 transform -translate-x-1/2 w-[90px] h-[25px] font-medium bg-yellow-400 rounded-full hover:font-medium hover:bg-black hover:text-yellow-400 hover:transition duration-500">
+            <span>Read More</span>
+           </button>
+        </Link>
+      </div>
+      <div className="blogcontainer scale-in-bottom min-h-[380px] lg:min-w-[400px] lg:min-h-[380px] md:min-h-[410px] md:max-w-[320px] sm:max-w-[280px] sm:min-h-[430px] m-4 rounded-xl p-3">
+        {" "}
+          <img src="blog4.jpg" alt="" className=" w-[400px] h-[170px] bg-red-100"/>
+          <h1 className="text-xl font-bold mb-4">"Simple Workouts to Stay Fit at Home"</h1>
+          <p><strong>Description</strong>: A collection of simple home workouts suitable for all fitness levels, emphasizing consistency and motivation for maintaining physical fitness without equipment.
+          </p>
+        <Link href="/blog-4">
+          <button className="read absolute bottom-1.5 left-1/2 transform -translate-x-1/2 w-[90px] h-[25px] font-medium bg-yellow-400 rounded-full hover:font-medium hover:bg-black hover:text-yellow-400 hover:transition duration-500">
+            <span>Read More</span>
+           </button>
+        </Link>
+      </div>
+      <div className="blogcontainer scale-in-bottom min-h-[380px] lg:min-w-[400px] lg:min-h-[380px] md:min-h-[410px] md:max-w-[320px] sm:max-w-[280px] sm:min-h-[430px] m-4 mx-<6> rounded-xl p-3">
+        {" "}
+          <img src="blog5.jpg" alt="" className=" w-[400px] h-[170px] bg-red-100"/>
+          <h1 className="text-xl font-bold mb-4">"Start Learning Web Development"</h1>
+          <p><strong>Description</strong>: A beginner's guide to web development, covering skills like HTML, CSS, and JavaScript, along with tips on version control and practical projects.
+          </p>
+        <Link href="/blog-5">
+          <button className="read absolute bottom-1.5 left-1/2 transform -translate-x-1/2 w-[90px] h-[25px] font-medium bg-yellow-400 rounded-full hover:font-medium hover:bg-black hover:text-yellow-400 hover:transition duration-500">
+            <span>Read More</span>
+           </button>
+        </Link>
+      </div>
+      <div className="blogcontainer scale-in-bottom min-h-[400px] lg:min-w-[400px] lg:min-h-[380px] md:min-h-[410px] md:max-w-[320px] sm:max-w-[280px] sm:min-h-[430px] m-4 rounded-xl p-3">
+          <img src="blog6.jpg" alt="" className=" w-[400px] h-[170px] bg-red-100"/>
+          <h1 className="text-xl font-bold mb-4">"5 Ways to Manage Stress and Anxiety"</h1>
+          <p><strong>Description</strong>: Discover effective strategies to manage stress and anxiety, including deep breathing, regular exercise, healthy routines, and the importance of social connections.
+          </p>
+        <Link href="/blog-6">
+          <button className="read absolute bottom-1.5 left-1/2 transform -translate-x-1/2 w-[90px] h-[25px] font-medium bg-yellow-400 rounded-full hover:font-medium hover:bg-black hover:text-yellow-400 hover:transition duration-500">
+            <span>Read More</span>
+           </button>
+        </Link>
+      </div>
     </div>
   );
 }
